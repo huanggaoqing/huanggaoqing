@@ -8,7 +8,7 @@ import dayjs from 'dayjs'
 import baiduCode from './config/baiduCode' // 百度统计hm码
 import htmlModules from './config/htmlModules' // 自定义插入的html块
 
-const DOMAIN_NAME = 'xugaoyi.com' // 域名 (不带https)
+const DOMAIN_NAME = 'huanggaoqing.github.io/' // 域名 (不带https)
 const WEB_SITE = `https://${DOMAIN_NAME}` // 网址
 
 export default defineConfig4CustomTheme<VdoingThemeConfig>({
@@ -51,14 +51,15 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
           { text: '归档', link: '/archives/' },
         ],
       },
+      {text: '友链', link: '/friends/'},
     ],
     sidebarDepth: 2, // 侧边栏显示深度，默认1，最大2（显示到h3标题）
     logo: '/img/logo.png', // 导航栏logo
-    repo: 'xugaoyi/vuepress-theme-vdoing', // 导航栏右侧生成Github链接
+    repo: 'huanggaoqing/self_blog', // 导航栏右侧生成Github链接
     searchMaxSuggestions: 10, // 搜索结果显示最大数
     lastUpdated: '上次更新', // 开启更新时间，并配置前缀文字   string | boolean (取值为git提交时间)
     docsDir: 'docs', // 编辑的文件夹
-    // docsBranch: 'master', // 编辑的文件所在分支，默认master。 注意：如果你的分支是main则修改为main
+    docsBranch: 'main', // 编辑的文件所在分支，默认master。 注意：如果你的分支是main则修改为main
     editLinks: true, // 启用编辑
     editLinkText: '编辑',
 
@@ -136,10 +137,10 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
 
     // 页脚信息
     footer: {
-      createYear: 2019, // 博客创建年份
+      createYear: 2023, // 博客创建年份
       // TODO 部署后备案信息要改
       copyrightInfo:
-        'HuangGaoQing | <a href="https://github.com/xugaoyi/vuepress-theme-vdoing/blob/master/LICENSE" target="_blank">MIT License</a>', // 博客版权信息、备案信息等，支持a标签或换行标签</br>
+        'HuangGaoQing | <a href="https://github.com/huanggaoqing/self_blog/blob/main/LICENSE" target="_blank">MIT License</a>', // 博客版权信息、备案信息等，支持a标签或换行标签</br>
     },
 
     // 扩展自动生成frontmatter。（当md文件的frontmatter不存在相应的字段时将自动添加。不会覆盖已有的数据。）
@@ -260,26 +261,26 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         },
       },
     ],
-    // [
-    //   'vuepress-plugin-comment', // 评论
-    //   {
-    //     choosen: 'gitalk',
-    //     options: {
-    //       clientID: 'a6e1355287947096b88b',
-    //       clientSecret: 'f0e77d070fabfcd5af95bebb82b2d574d7248d71',
-    //       repo: 'blog-gitalk-comment', // GitHub 仓库
-    //       owner: 'xugaoyi', // GitHub仓库所有者
-    //       admin: ['xugaoyi'], // 对仓库有写权限的人
-    //       // distractionFreeMode: true,
-    //       pagerDirection: 'last', // 'first'正序 | 'last'倒序
-    //       id: '<%- (frontmatter.permalink || frontmatter.to.path).slice(-16) %>', //  页面的唯一标识,长度不能超过50
-    //       title: '「评论」<%- frontmatter.title %>', // GitHub issue 的标题
-    //       labels: ['Gitalk', 'Comment'], // GitHub issue 的标签
-    //       body:
-    //         '页面：<%- window.location.origin + (frontmatter.to.path || window.location.pathname) %>', // GitHub issue 的内容
-    //     },
-    //   },
-    // ],
+    [
+      'vuepress-plugin-comment', // 评论
+      {
+        choosen: 'gitalk',
+        options: {
+          clientID: 'f6054636433e1f98841d',
+          clientSecret: '632f93f369df80e4e36e711b0f067b567f6420d7',
+          repo: 'huanggaoqing.github.io', // GitHub 仓库
+          owner: 'huanggaoqing', // GitHub仓库所有者
+          admin: ['huanggaoqing'], // 对仓库有写权限的人
+          // distractionFreeMode: true,
+          pagerDirection: 'last', // 'first'正序 | 'last'倒序
+          id: '<%- (frontmatter.permalink || frontmatter.to.path).slice(-16) %>', //  页面的唯一标识,长度不能超过50
+          title: '「评论」<%- frontmatter.title %>', // GitHub issue 的标题
+          labels: ['Gitalk', 'Comment'], // GitHub issue 的标签
+          body:
+            '页面：<%- window.location.origin + (frontmatter.to.path || window.location.pathname) %>', // GitHub issue 的内容
+        },
+      },
+    ],
     [
       '@vuepress/last-updated', // "上次更新"时间格式
       {
