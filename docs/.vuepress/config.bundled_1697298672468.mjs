@@ -134,7 +134,7 @@ var config_default = defineConfig4CustomTheme({
       link: "https://github.com/huanggaoqing"
     },
     blogger: {
-      avatar: "https://avatars.githubusercontent.com/u/60996983?v=4",
+      avatar: "https://avatars.githubusercontent.com/u/60996983",
       name: "HuangGaoQing",
       slogan: "\u4E00\u540D\u7A0B\u5E8F\u5458"
     },

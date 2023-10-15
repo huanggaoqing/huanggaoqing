@@ -108,7 +108,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
 
     // 博主信息 (显示在首页侧边栏)
     blogger: {
-      avatar: 'https://avatars.githubusercontent.com/u/60996983?v=4',
+      avatar: 'https://avatars.githubusercontent.com/u/60996983',
       name: 'HuangGaoQing',
       slogan: '一名程序员',
     },
