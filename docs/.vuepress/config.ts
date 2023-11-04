@@ -55,11 +55,20 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
           { text: '归档', link: '/archives/' },
         ],
       },
+      {
+        text: "⭐️收藏",
+        link: "/pages/d81bc6/",
+        items: [
+          { text: "前端网站", link: "/pages/d81bc6/" },
+          { text: "后端网站", link: "/pages/33853e/" },
+          { text: "其他", link: "/pages/589f10/" },
+        ]
+      },
       {text: '🔗友链', link: '/friends/'},
     ],
     sidebarDepth: 2, // 侧边栏显示深度，默认1，最大2（显示到h3标题）
     logo: 'https://avatars.githubusercontent.com/u/60996983', // 导航栏logo
-    repo: 'huanggaoqing/self_blog', // 导航栏右侧生成Github链接
+    repo: 'huanggaoqing/huanggaoqing', // 导航栏右侧生成Github链接
     searchMaxSuggestions: 10, // 搜索结果显示最大数
     lastUpdated: '上次更新', // 开启更新时间，并配置前缀文字   string | boolean (取值为git提交时间)
     docsDir: 'docs', // 编辑的文件夹
@@ -156,7 +165,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       createYear: 2023, // 博客创建年份
       // TODO 部署后备案信息要改
       copyrightInfo:
-        'HuangGaoQing | <a href="https://github.com/huanggaoqing/self_blog/blob/main/LICENSE" target="_blank">MIT License</a>', // 博客版权信息、备案信息等，支持a标签或换行标签</br>
+        'HuangGaoQing | <a href="https://github.com/huanggaoqing/huanggaoqing/blob/main/LICENSE" target="_blank">MIT License</a>', // 博客版权信息、备案信息等，支持a标签或换行标签</br>
     },
 
     // 扩展自动生成frontmatter。（当md文件的frontmatter不存在相应的字段时将自动添加。不会覆盖已有的数据。）
